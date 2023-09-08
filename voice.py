@@ -1,7 +1,5 @@
-import openai
 import os
 import torch
-import keyboard
 import speech_recognition # для работы требуется установить pyaudio
 from playsound import playsound #pip install playsound==1.2.2
 from IPython.display import Audio
