@@ -1,13 +1,30 @@
-def readAndUploadFile(filepath,exitValue):
-    output=""
-    with open(filepath,"r") as file:
-            for line in file.readline():
-                  if (exitValue in line):
-                        break
-                  output+=line
-    
-    print(output)
+import os
+import codecs
 
-readAndUploadFile("C:\Users\User\Desktop\IVA-main\ test.txt","1")
+def readFile(filepath,fileName,exitValue):
+    output=""
+    newFileName=1
+    with codecs.open(filepath+fileName,encoding='utf-8,',mode="r") as file:
+        lines = file.readlines()
+        lines
+        for line in lines:
+            if (exitValue in line):
+                if (line[0]==exitValue):
+                    if(len(line)==1):
+                    # if not os.path.isfile(f"{filepath}/{fileName}"):
+                        with codecs.open(f"{filepath}\\{str(newFileName)}.txt",encoding='utf-8',mode="w") as new_file:
+                            new_file.write(output)
+                        print(f"Was created {str(newFileName)}.txt in {filepath}")
+                        newFileName=newFileName+1
+                        output=""
+                        continue
+            
+            output+=line
+        print(output)
+
+def changeFileForDataSet(filepath,fileName):
+    pass
+
+readFile(r"C:\Users\User\Desktop\IVA-main","\\noser2.txt","1")
                 
 #C:\Users\User\Desktop\IVA-main\Перечень-неисправностей.txt
