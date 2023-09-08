@@ -6,5 +6,6 @@ test
 HUI
 
 test1
-d0a1b2273e786de418fef45250601e4558fcf99d
+<<<<<<< HEAD
 1231421
+test2
