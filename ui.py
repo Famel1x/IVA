@@ -41,8 +41,7 @@ def main(page: ft.Page):
     def pick_files_result(e: ft.FilePickerResultEvent):
         try:
             selected_files.value = (
-            "\n".join(map(lambda f: f.name, e.files)) if e.files else "Cancelled!"
-            )
+            "\n".join(map(lambda f: f.name, e.files)) if e.files else "")
             selected_files.update()
         except:
             pass
@@ -75,11 +74,7 @@ def main(page: ft.Page):
                 top = 15)
         ]), 
         bgcolor = ft.colors.TRANSPARENT)
-    lv = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
-    count = 1
-    for i in range(0, 60):
-        lv.controls.append(ft.Text(f"Line {count}"))
-        count += 1
+
     tab_upload = ft.Container(
         ft.Stack([
             ft.Column(
@@ -94,8 +89,6 @@ def main(page: ft.Page):
                         ],
                         top = 15,
                         left = 100),
-
-                        ft.Column([lv], top = 10),
 
                         ft.Column([
                             selected_files],
