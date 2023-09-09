@@ -86,5 +86,4 @@ def ask(text):
     idx_to_char, 
     temp=0.3, 
     prediction_len=250, 
-    start_text=text
-    )
+    start_text=text)
