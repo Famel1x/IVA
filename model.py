@@ -87,3 +87,5 @@ def ask(text):
     temp=0.3, 
     prediction_len=250, 
     start_text=text)
+    
+print(ask("что такое поезд"))
