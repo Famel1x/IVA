@@ -1,3 +1,4 @@
+#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
 import os
 import torch
 import speech_recognition # для работы требуется установить pyaudio

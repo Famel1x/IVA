@@ -1,4 +1,5 @@
 from voice import Voice
+import model
 import flet as ft
 import os
 
@@ -21,18 +22,29 @@ def main(page: ft.Page):
     page.window_height = 500
     page.theme_mode = getSettings("theme")
 
-    progress_voice_assistant = ft.ProgressRing(scale=1.5, color = ft.colors.BLUE, visible = False)
+    progress_voice_assistant = ft.ProgressRing(scale=1.75, color = ft.colors.BLUE, visible = False)
 
     def speech():
         progress_voice_assistant.visible = True
         progress_voice_assistant.update()
         
-        voice.textToSpeech("Привет мир!")
+        voice.speechToText()
+
+        listTileQuestion.title = ft.Text(voice.resultSTT)
+        listTileQuestion.update()
 
         progress_voice_assistant.color = ft.colors.GREEN
         progress_voice_assistant.update()
 
-        voice.textToSpeech("Привет мир!")
+        model_result = model.ask(voice.resultSTT)
+
+        progress_voice_assistant.color = ft.colors.PURPLE
+        progress_voice_assistant.update()
+
+        voice.textToSpeech(model_result)
+
+        listTileAnswer.title = ft.Text(model_result)
+        listTileAnswer.update()
 
         progress_voice_assistant.color = ft.colors.BLUE
         progress_voice_assistant.visible = False
@@ -41,8 +53,7 @@ def main(page: ft.Page):
     def pick_files_result(e: ft.FilePickerResultEvent):
         try:
             selected_files.value = (
-            "\n".join(map(lambda f: f.name, e.files)) if e.files else "Cancelled!"
-            )
+            "\n".join(map(lambda f: f.name, e.files)) if e.files else "")
             selected_files.update()
         except:
             pass
@@ -52,19 +63,51 @@ def main(page: ft.Page):
 
     page.overlay.append(pick_files_dialog)
 
+    listTileQuestion = ft.ListTile(
+                            leading=ft.Icon(ft.icons.QUESTION_ANSWER),
+                            title=ft.Text("Ваш вопрос будет тут"),
+                            selected=True,
+                        )
+                        
+    listTileAnswer = ft.ListTile(
+                            title=ft.Text("Ваш ответ будет тут"))
+
+    card = ft.Container(
+                width = 375,
+                border_radius = 40,
+                bgcolor = ft.colors.BLACK45,
+                content = ft.Column(
+                    [   
+                        listTileQuestion,
+                        listTileAnswer
+                        # ft.ListTile(
+                        #     leading=ft.Icon(ft.icons.QUESTION_ANSWER),
+                        #     title=ft.Text("One-line selected list tile"),
+                        #     selected=True,
+                        # ),
+                        # ft.ListTile(
+                        #     title=ft.Text("One-line with leading control"),
+                        # )
+                    ],
+                    spacing = 0,
+                ),
+                padding = ft.padding.symmetric(vertical = 10),
+            )
+
     tab_assistant = ft.Container(
         ft.Stack([
             ft.Column(
                 [
                 ft.Container(
                     ft.Stack([
-                        ft.Column([progress_voice_assistant], top = 205, left = 165),
+                        ft.Column([card]),
+                        ft.Column([progress_voice_assistant], top = 310, left = 160),
                         ft.Column([
-                            ft.IconButton(icon = ft.icons.KEYBOARD_VOICE, icon_size = 30, bgcolor = ft.colors.BLUE,
+                            ft.IconButton(icon = ft.icons.KEYBOARD_VOICE, icon_size = 40, bgcolor = ft.colors.BLUE,
                             on_click = lambda x: speech()),
                         ],
-                        top = 200,
-                        left = 160)
+                        top = 300,
+                        left = 150)
                     ]),
                     border_radius = 40,
                     padding = 5,
@@ -75,11 +118,7 @@ def main(page: ft.Page):
                 top = 15)
         ]), 
         bgcolor = ft.colors.TRANSPARENT)
-    lv = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
-    count = 1
-    for i in range(0, 60):
-        lv.controls.append(ft.Text(f"Line {count}"))
-        count += 1
+
     tab_upload = ft.Container(
         ft.Stack([
             ft.Column(
@@ -94,8 +133,6 @@ def main(page: ft.Page):
                         ],
                         top = 15,
                         left = 100),
-
-                        ft.Column([lv], top = 10),
 
                         ft.Column([
                             selected_files],
