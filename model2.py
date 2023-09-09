@@ -165,27 +165,6 @@ onehot_answers = utils.to_categorical( padded_answers , VOCAB_SIZE )
 decoder_output_data = np.array( onehot_answers )
 print( decoder_output_data.shape )
 
-
-# %% [markdown]
-# ## 3) Определение модели кодер-декодер
-# Модель будет иметь слои встраивания, LSTM и Dense. Базовая конфигурация выглядит следующим образом.
-# 
-# 
-# * 2 входных слоя : один для `encoder_input_data` и другой для `decoder_input_data`.
-# * Слой встраивания: Для преобразования векторов токенов в плотные векторы фиксированного размера. ** ( Примечание: Не забудьте здесь аргумент `mask_zero=True` )**
-# * Уровень LSTM: Обеспечивает доступ к долгосрочным и краткосрочным ячейкам.
-# 
-# Работающий :
-# 
-# 1. `encoder_input_data` находится на уровне встраивания ( `encoder_embedding` ).
-# 2. Выходные данные слоя встраивания поступают в ячейку LSTM, которая генерирует 2 вектора состояния (`h` и `c`, которые являются `encoder_states`).
-# 3. Эти состояния задаются в ячейке LSTM декодера.
-# 4. Данные decoder_input_data поступают через уровень встраивания.
-# 5. Вложения выполняются в ячейку LSTM (в которой были состояния) для создания последующих действий.
-# 
-
-# %%
-
 encoder_inputs = tf.keras.layers.Input(shape=( maxlen_questions , ))
 encoder_embedding = tf.keras.layers.Embedding( VOCAB_SIZE, 200 , mask_zero=True ) (encoder_inputs)
 encoder_outputs , state_h , state_c = tf.keras.layers.LSTM( 200 , return_state=True )( encoder_embedding )
@@ -209,7 +188,7 @@ model.summary()
 # Мы обучаем модель для нескольких эпох с помощью оптимизатора `RMSProp` и функции потерь `categorical_crossentropy`.
 
 # %%
-model = tf.keras.models.load_model("model.h5")
+model = tf.keras.models.load_model("model (1).h5")
 
 
 # %% [markdown]
