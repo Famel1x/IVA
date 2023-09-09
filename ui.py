@@ -21,8 +21,22 @@ def main(page: ft.Page):
     page.window_height = 500
     page.theme_mode = getSettings("theme")
 
+    progress_voice_assistant = ft.ProgressRing(scale=1.5, color = ft.colors.BLUE, visible = False)
+
     def speech():
-        voice.textToSpeech("Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!Привет мир!")
+        progress_voice_assistant.visible = True
+        progress_voice_assistant.update()
+        
+        voice.textToSpeech("Привет мир!")
+
+        progress_voice_assistant.color = ft.colors.GREEN
+        progress_voice_assistant.update()
+
+        voice.textToSpeech("Привет мир!")
+
+        progress_voice_assistant.color = ft.colors.BLUE
+        progress_voice_assistant.visible = False
+        progress_voice_assistant.update()
 
     def pick_files_result(e: ft.FilePickerResultEvent):
         try:
@@ -44,6 +58,7 @@ def main(page: ft.Page):
                 [
                 ft.Container(
                     ft.Stack([
+                        ft.Column([progress_voice_assistant], top = 205, left = 165),
                         ft.Column([
                             ft.IconButton(icon = ft.icons.KEYBOARD_VOICE, icon_size = 30, bgcolor = ft.colors.BLUE,
                             on_click = lambda x: speech()),
@@ -60,7 +75,11 @@ def main(page: ft.Page):
                 top = 15)
         ]), 
         bgcolor = ft.colors.TRANSPARENT)
-    
+    lv = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
+    count = 1
+    for i in range(0, 60):
+        lv.controls.append(ft.Text(f"Line {count}"))
+        count += 1
     tab_upload = ft.Container(
         ft.Stack([
             ft.Column(
@@ -75,6 +94,8 @@ def main(page: ft.Page):
                         ],
                         top = 15,
                         left = 100),
+
+                        ft.Column([lv], top = 10),
 
                         ft.Column([
                             selected_files],

@@ -42,6 +42,7 @@ class Voice:
 
         playsound(f'TTS results/voiceAnswer{self.answer_number}.wav')
         self.answer_number += 1
+        print(f"Озвучен results/voiceAnswer{self.answer_number}")
 
     def speechToText(self, deviceIndex: int = 1):
         while True:
