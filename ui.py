@@ -1,4 +1,5 @@
 from voice import Voice
+import model
 import flet as ft
 import os
 
@@ -24,19 +25,20 @@ def main(page: ft.Page):
     progress_voice_assistant = ft.ProgressRing(scale=1.5, color = ft.colors.BLUE, visible = False)
 
     def speech():
-        progress_voice_assistant.visible = True
-        progress_voice_assistant.update()
+        print(model.ask("что такое вагон"))
+        # progress_voice_assistant.visible = True
+        # progress_voice_assistant.update()
         
-        voice.textToSpeech("Привет мир!")
+        # voice.textToSpeech("Привет мир!")
 
-        progress_voice_assistant.color = ft.colors.GREEN
-        progress_voice_assistant.update()
+        # progress_voice_assistant.color = ft.colors.GREEN
+        # progress_voice_assistant.update()
 
-        voice.textToSpeech("Привет мир!")
+        # voice.textToSpeech("Привет мир!")
 
-        progress_voice_assistant.color = ft.colors.BLUE
-        progress_voice_assistant.visible = False
-        progress_voice_assistant.update()
+        # progress_voice_assistant.color = ft.colors.BLUE
+        # progress_voice_assistant.visible = False
+        # progress_voice_assistant.update()
 
     def pick_files_result(e: ft.FilePickerResultEvent):
         try:
