@@ -15,25 +15,40 @@ with open("VLAD/20.yml", "w", encoding = "UTF-8") as file:
                 k += 1
             
             if i != k - 1:
-                if sheet[f"C{i + 1}"].value == None:
-                    file.write(f"--{sheet[f'B{i}'].value}" + " " + f"{sheet[f'C{i}'].value}?\n")
+                if sheet[f"C{i + 1}"].value == None: 
+                        
+                    string = f"--{sheet[f'B{i}'].value}".replace(".", "") + " " + f"{sheet[f'C{i}'].value}".replace(".", "")
+
+                    file.write(string + "?\n")
 
                     for j in range(i, k):
-                        file.write(f" -{sheet[f'D{j}'].value}" + ".\n")
+                        string = f" -{sheet[f'D{j}'].value}".replace(".", "")
+
+                        file.write(string + ".\n")
                         
                 else:
-                    file.write(f"--{sheet[f'B{i}'].value}?\n")
+                    string = f"--{sheet[f'B{i}'].value}".replace(".", "")
+
+                    file.write(string + "?\n")
 
                     for j in range(i, k):
                         if sheet[f'C{i}'].value != None:  
-                            file.write(f" -{sheet[f'C{j}'].value}" + ".\n")
+                            
+                            string = f" -{sheet[f'C{j}'].value}".replace(".", "")
+                            file.write(string + ".\n")
 
                     for j in range(i, k):
-                        file.write(f" -{sheet[f'D{j}'].value}" + ".\n")
+                        string = f" -{sheet[f'D{j}'].value}".replace(".", "")
+                        file.write(string + ".\n")
 
             else:
-                file.write(f"--{sheet[f'B{i}'].value}" + " " + f"{sheet[f'C{i}'].value}?\n")
-                file.write(f" -{sheet[f'D{i}'].value}" + ".\n")
+                string = f"--{sheet[f'B{i}'].value}".replace(".", "") + " " + f"{sheet[f'C{i}'].value}".replace(".", "")
+
+                file.write(string + "?\n")
+                
+                string = f" -{sheet[f'D{i}'].value}".replace(".", "")
+
+                file.write(string + ".\n")
 
         print(f"{i} {k}")
         i = k
