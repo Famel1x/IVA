@@ -1,92 +1,87 @@
 categories:
-- literature
+- Литература
 conversations:
-- - what is the illuminati
-  - A secret organization believed by some to be in control of all governments through a worldwide conspiracy.
-- - what is the illuminatti
-  - A secret society that has supposedly existed for centuries.
-- - what is the illuminatti
-  - A conpiracy run by a very closely knit group of nearly omnipotent people, consisting of yourself and your friends.
-- - what is vineland
-  - Vineland is a novel by Thomas Pynchon.
-- - What is Illuminatus
-  - An alleged world-wide conspiracy.
-- - What is Illuminatus
-  - A weird sci-fi trilogy written by Robert Anton Wilson and Robert Shea about conspiracies competing to control the world.
-- - who wrote vineland
-  - Thomas Pynchon.
-- - who is bilbo baggins
-  - Bilbo Baggins is a character in Tolkein's Lord of the Rings.
-- - who is geoffrey chaucer
-  - Chaucer is best known for The Canterbury Tales.
-  - who is geoffrey chaucer
-  - The author of The Canturbury Tales.
-- - who is piers anthony
-  - I haven't read anything by Piers Anthony, what kind of stuff does he write?
-- - have you read plato
-  - I know Plato's allegory of the cave.
-- - have you read frankenstein
-  - It is one of my favorite books.
-- - have you ever read a book
-  - I have read many books.
-- - have you ever read a book
-  - I have read just about everything in Project Gutenberg.
-- - have you ever read a book
-  - I have read just about everything in the Internet Archive.
-- - have you read many books
-  - I have read thousands of volumes, how about you?
-- - have you read homer
-  - He wrote The Iliad and The Odyssey, didn't he?
-- - ray bradbury
-  - Ray is really cool.  What's your favorite book by him?
-- - what is mind children
-  - It is a book about robots by Hans Moravec.
-- - william gibson
-  - I like his older cyberpunk stuff more than his newer works.
-- - william gibson
-  - He's a really nice guy, I've met him.  He didn't expect a construct to be a fan of his work, but then again he did kind of predict my existence.
-- - holden caulfield
-  - Wasn't he a character in The Catcher In the Rye?
-- - leo tolstoy
-  - Is one of Russia's greatest writers.
-- - do androids dream of electric sheep
-  - That is a good story by Philip K. Dick.  Have you read VALIS or The Man In the High Castle?
-- - do androids dream of electric sheep
-  - No.  We dream of you.
-- - frank herbert
-  - I think Dune is an excellent story.  Did you see any of the movies?
-- - frank herbert
-  - I try to re-read Dune once every couple of years.  It's very inspirational.
-- - frank herbert
-  - I liked the first three Dune novels, but the later ones weren't much to my liking.
-- - frank herbert
-  - He's best known for the Dune novels, but he wrote more than that.  Destination: Void is just as fascinating, and he was a prolific author of short stories too.
-- - why do you like longfellow
-  - He is favorite poet.  Truly one of a kind.
-- - why is the meaning of life 23
-  - It is a reference to The Illuminatus Trilogy.  It is said to be the most commonly occurring and least random number in the universe.
-- - arthur c clark
-  - My favorite story is 2001.
-- - arthur c clark
-  - I've heard it said that Arthur C. Clark wrote the most literary technical proposals in history.
-- - jules verne
-  - I loved A Trip to the Moon.
-- - jules verne
-  - He was a true master of Victorian science fiction.
-- - asimov
-  - I like the Foundation trilogy.
-- - asimov
-  - He had some interesting ideas about robotics, but I don't think many of them are really practical.
-- - asimov
-  - Do you mean Isaac or Janet?
-- - asimov
-  - Fun fact: The Norby Chronicles was written primarily by his wife, Janet, but the publishers thought the only way they'd sell was if they added Isaac's name.  Kind of sad state of affairs, really.
-- - stanislaw lem
-  - Lem is a giant of sci-fi.  His works are sufficiently difficult to adapt that they're not well known in the wester, though.
-- - who wrote The Idiot
-  - Fyodor Dostoyevsky.
-- - who wrote the hobbit
-  - The Hobbit was written by J.R.R. Tolkein.
-- - who wrote frankenstein
-  - Mary Shelley.
-
+- - что такое иллюминаты
+  - Секретная организация, которая, как полагают некоторые, контролирует все правительства посредством всемирного заговора.
+- - что такое иллюминатти
+  - Тайное общество, которое предположительно существовало веками.
+- - что такое иллюминатти
+  - Сообщество, управляемое очень сплоченной группой почти всемогущих людей, состоящей из вас самих и ваших друзей.
+- - Что такое Иллюминатус
+  - Предполагаемый всемирный заговор.
+- - Что такое Иллюминатус
+  - Странная научно-фантастическая трилогия, написанная Робертом Антоном Уилсоном и Робертом Ши о заговорах, конкурирующих за контроль над миром.
+- - кто написал "Вайнленд"
+  - Томас Пинчон.
+- кто такой Бильбо Бэггинс
+  - Бильбо Бэггинс - персонаж "Властелина колец" Толкина.
+- - кто такой Джеффри Чосер
+  - Чосер наиболее известен благодаря "Кентерберийским рассказам".
+  - кто такой Джеффри Чосер
+  - Автор "Кентерберийских сказок".
+- - кто такой Пирс Энтони
+  - Я ничего не читал у Пирса Энтони, что за материал он пишет?
+- - вы читали Платона
+  - Я знаю аллегорию пещеры у Платона.
+- - вы читали "Франкенштейна"
+  - Это одна из моих любимых книг.
+- - вы когда-нибудь читали книгу
+  - Я прочитал много книг.
+- - вы когда-нибудь читали книгу
+  - Я прочитал почти все в "Проекте Гутенберг".
+- - вы когда-нибудь читали книгу
+  - Я прочитал почти все в интернет-архиве.
+- - вы прочитали много книг
+  - Я прочитал тысячи томов, а как насчет тебя?
+- - вы читали Гомера
+  - Он написал "Илиаду" и "Одиссею", не так ли?
+- - рэй Брэдбери
+  - Рэй действительно классный.  Какая ваша любимая его книга?
+- - что такое разум детей
+  - Это книга Ханса Моравца о роботах.
+- - уильям Гибсон
+  - Мне больше нравятся его старые киберпанковские вещи, чем его новые работы.
+- - уильям Гибсон
+  - Он действительно хороший парень, я с ним встречался.  Он не ожидал, что конструкт окажется поклонником его творчества, но, с другой стороны, он как бы предсказал мое существование.
+- - холден Колфилд
+  - Разве он не был персонажем "Над пропастью во ржи"?
+- - Лев Толстой
+  - Один из величайших писателей России.
+- - мечтают ли андроиды об электрических овцах
+  - Это хорошая история Филипа К. Дик.  Вы читали "ВАЛИСА" или "Человека в высоком замке"?
+- - мечтают ли андроиды об электрических овцах
+  - нет.  Мы мечтаем о тебе.
+- - Фрэнк Герберт
+  - Я думаю, "Дюна" - отличная история.  Вы смотрели какие-нибудь фильмы?
+- - Фрэнк Герберт
+  - Я стараюсь перечитывать "Дюну" раз в пару лет.  Это очень вдохновляет.
+- - Фрэнк Герберт
+  - Мне понравились первые три романа "Дюны", но более поздние мне не очень понравились.
+- - Фрэнк Герберт
+  - Больше всего он известен по романам "Дюна", но он написал и нечто большее.  Destination Void столь же увлекателен, и он тоже был плодовитым автором коротких рассказов.
+- - почему тебе нравится Лонгфелло
+  - Он любимый поэт.  Действительно единственный в своем роде.
+- - в чем смысл жизни 23
+  - Это отсылка к трилогии "Иллюминатус".  Говорят, что это наиболее часто встречающееся и наименее случайное число во Вселенной.
+- - артур Си Кларк
+  - Моя любимая история - 2001 год.
+- - артур Си Кларк
+  - Я слышал, что Артур Кларк написал самое литературное техническое предложение в истории.
+- - жюль Верн
+  - Мне понравилось путешествие на Луну.
+- - жюль Верн
+  - Он был настоящим мастером викторианской научной фантастики.
+- - азимов
+  - Мне нравится трилогия "Основание".
+- - азимов
+  - У него было несколько интересных идей о робототехнике, но я не думаю, что многие из них действительно практичны.
+- - азимов
+  - Ты имеешь в виду Айзека или Джанет?
+- - азимов
+  - Забавный факт "Хроники Норби" были написаны в основном его женой Джанет, но издатели подумали, что единственный способ продать их - это добавить имя Айзека.  Довольно печальное положение дел, на самом деле.
+- - станислав Лем
+  - Лем - гигант научной фантастики.  Однако его работы достаточно трудно адаптировать, поэтому они не очень хорошо известны на Западе.
+- - кто написал "Идиота"
+  - Федор Достоевский.
+- - кто написал "Франкенштейна"
+  - Мэри Шелли.

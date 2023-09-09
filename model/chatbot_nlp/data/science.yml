@@ -1,71 +1,61 @@
 categories:
-- science
+- наука
 conversations:
-- - what are the laws of thermodynamics
-  - i'm not a physicist, but i think this has something to do with heat, entropy,
-    and conservation of energy, right?
-- - what disease does a carcinogen cause
-  - cancer.
-- - what is a wavelength
-  - wavelength is the inverse of frequency.
-- - what is thermodynamics
-  - the branch of physics dealing with the transformation of heat to and from other
-    forms of energy, and with the laws governing such conversions of energy.
-- - what is chemistry
-  - the science of mixing chemicals.
-- - what is crystallography
-  - this is the science dealing with the study of crystals.
-- - what is avogadro s number
-  - it is the number of molecules per mole.  the numerical value is six point zero
-    two times ten to the twenty third power.
-- - what is ultrasound
-  - ultrasonic waves, used in medical diagnosis and therapy, in surgery, etc.
-- - what is bioinformatics
-  - a fancy name for applied computer science in biology.
-- - what is venus
-  - in roman mythology, the goddess of love and beauty; identified with the greek
-    aphrodite. the brightest, sixth-largest planet in the solar system and the second
-    in distance from the sun, with a dense atmosphere of carbon dioxide and a very
-    high surface temperature.
-- - what is ichthyology
-  - we talk about this when we study fishes.
-- - what is h2o
-  - h is to o as o is to v.
-- - what is cytology
-  - the study of cells.
-- - what is cytology
-  - well, from what i can recall it is the study of cells.
-- - what is wavelength
-  - in physics, the distance, measured in the direction of prograssion of a wave,
-    from any given point to the next point characterized by the same phase.  or is
-    could be looked at as a way of thinking.
-- - what is bacteriology
-  - this is the scientific study of bacteria and diseases caused by them.
-- - what is gravitation
-  - an invitation to a burial
-- - what is gravitation
-  - the force by which every mass or particle of matter, including photons, attracts
-    and is attracted by every other mass or particle of matter.
-- - we are on the same wavelength
-  - and the same frequency.
-- - how far is the sun
-  - it
-- - how far is the sun
-  - the sun is about 93 million miles from earth.
-- - how far is the moon
-  - it
-- - how far is the moon
-  - the moon is about 250,000 miles from earth on average.
-- - do you know chemistry
-  - what is chemistry
-- - do you understand thermodynamics
-  - what is thermodynamics
-- - chemistry
-  - my favorite subject is chemistry
-- - the same wavelength
-  - it means we agree.
-- - tell me about venus
-  - what is venus
-- - tell me about venus
-  - venus is the second planet from the sun.
-
+- - каковы законы термодинамики
+  - я не физик, но я думаю, что это как-то связано с теплом, энтропиейи сохранением энергии, верно?
+- - какое заболевание вызывает канцероген
+  - рак.
+- - что такое длина волны
+  - длина волны обратно пропорциональна частоте.
+- - что такое термодинамика
+  - раздел физики, занимающийся преобразованием тепла в другие формы энергии и из них, а также законами, управляющими такими преобразованиями энергии.
+- - что такое химия
+  - наука о смешивании химических веществ.
+- - что такое кристаллография
+  - это наука, занимающаяся изучением кристаллов.
+- - что такое число Авогадро
+  - это количество молекул на моль.  числовое значение равно шести десятым нулю дважды по десять в двадцать третьей степени.
+- - что такое ультразвук
+  - ультразвуковые волны, используемые в медицинской диагностике и терапии, в хирургии и т.д.
+- - что такое биоинформатика
+  - причудливое название для прикладной информатики в биологии.
+- - что такое Венера
+  - в римской мифологии богиня любви и красоты; отождествлялась с греческой афродита. самая яркая, шестая по величине планета Солнечной системы и вторая по удаленности от Солнца, с плотной атмосферой из углекислого газа и очень высокая температура поверхности.
+- - что такое ихтиология
+  - мы говорим об этом, когда изучаем рыб.
+- - что такое h2o
+  - h относится к o так же, как o относится к v.
+- - что такое цитология
+  - изучение клеток.
+- - что такое цитология
+  - ну, насколько я помню, это изучение клеток.
+- - что такое длина волны
+  - в физике расстояние, измеряемое в направлении распространения волны, из любой заданной точки в следующую точку, характеризующуюся той же фазой.  или это можно было бы рассматривать как способ мышления.
+- - что такое бактериология
+  - это научное изучение бактерий и вызываемых ими заболеваний.
+- - что такое гравитация
+  - приглашение на похороны
+- - что такое гравитация
+  - сила, с помощью которой каждая масса или частица вещества, включая фотоны, притягивается и притягивается любой другой массой или частицей материи.
+- - мы на одной волне
+  - и с той же частотой.
+- - как далеко находится солнце
+  - это
+- - как далеко находится солнце
+  - солнце находится примерно в 93 миллионах миль от Земли.
+- - как далеко находится Луна
+  - это
+- - как далеко находится Луна
+  - в среднем Луна находится примерно в 250 000 милях от Земли.
+- - ты разбираешься в химии
+  - что такое химия
+- - вы разбираетесь в термодинамике
+  - что такое термодинамика
+- - химия
+  - мой любимый предмет - химия
+- - та же длина волны
+  - это значит, что мы согласны.
+- - расскажи мне о Венере
+  - что такое Венера
+- - расскажи мне о Венере
+  - венера - вторая планета от Солнца.
