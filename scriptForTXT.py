@@ -1,6 +1,6 @@
 import os
 import codecs
-import re
+import 
 
 def readFile(filepath,fileName,exitValue):
     output=""
