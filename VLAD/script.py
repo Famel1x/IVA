@@ -16,25 +16,25 @@ with open("VLAD/20.yml", "w", encoding = "UTF-8") as file:
             
             if i != k - 1:
                 if sheet[f"C{i + 1}"].value == None:
-                    file.write(f"--{sheet[f'B{i}'].value}" + " " + f"{sheet[f'C{i}'].value}\n")
+                    file.write(f"--{sheet[f'B{i}'].value}" + " " + f"{sheet[f'C{i}'].value}?\n")
 
                     for j in range(i, k):
-                        file.write(f" -{sheet[f'D{j}'].value}" + "\n")
+                        file.write(f" -{sheet[f'D{j}'].value}" + ".\n")
                         
                 else:
-                    file.write(f"--{sheet[f'B{i}'].value}")
+                    file.write(f"--{sheet[f'B{i}'].value}?\n")
 
                     for j in range(i, k):
                         if sheet[f'C{i}'].value != None:  
-                            file.write(f" -{sheet[f'C{j}'].value}" + "\n")
+                            file.write(f" -{sheet[f'C{j}'].value}" + ".\n")
 
                     for j in range(i, k):
-                        file.write(f" -{sheet[f'D{j}'].value}" + "\n")
+                        file.write(f" -{sheet[f'D{j}'].value}" + ".\n")
 
             else:
-                file.write(f"--{sheet[f'B{i}'].value}" + " " + f"{sheet[f'C{i}'].value}\n")
-                file.write(f" -{sheet[f'D{i}'].value}" + "\n")
+                file.write(f"--{sheet[f'B{i}'].value}" + " " + f"{sheet[f'C{i}'].value}?\n")
+                file.write(f" -{sheet[f'D{i}'].value}" + ".\n")
 
         print(f"{i} {k}")
         i = k
-        if i == 3000: exit(0)
+        if i == 1200: exit(0)
