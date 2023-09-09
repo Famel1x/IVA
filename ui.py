@@ -22,23 +22,33 @@ def main(page: ft.Page):
     page.window_height = 500
     page.theme_mode = getSettings("theme")
 
-    progress_voice_assistant = ft.ProgressRing(scale=1.5, color = ft.colors.BLUE, visible = False)
+    progress_voice_assistant = ft.ProgressRing(scale=1.75, color = ft.colors.BLUE, visible = False)
 
     def speech():
-        print(model.ask("что такое вагон"))
-        # progress_voice_assistant.visible = True
-        # progress_voice_assistant.update()
+        progress_voice_assistant.visible = True
+        progress_voice_assistant.update()
         
-        # voice.textToSpeech("Привет мир!")
+        voice.speechToText()
 
-        # progress_voice_assistant.color = ft.colors.GREEN
-        # progress_voice_assistant.update()
+        listTileQuestion.title = ft.Text(voice.resultSTT)
+        listTileQuestion.update()
 
-        # voice.textToSpeech("Привет мир!")
+        progress_voice_assistant.color = ft.colors.GREEN
+        progress_voice_assistant.update()
 
-        # progress_voice_assistant.color = ft.colors.BLUE
-        # progress_voice_assistant.visible = False
-        # progress_voice_assistant.update()
+        model_result = model.ask(voice.resultSTT)
+
+        progress_voice_assistant.color = ft.colors.PURPLE
+        progress_voice_assistant.update()
+
+        voice.textToSpeech(model_result)
+
+        listTileAnswer.title = ft.Text(model_result)
+        listTileAnswer.update()
+
+        progress_voice_assistant.color = ft.colors.BLUE
+        progress_voice_assistant.visible = False
+        progress_voice_assistant.update()
 
     def pick_files_result(e: ft.FilePickerResultEvent):
         try:
@@ -53,19 +63,51 @@ def main(page: ft.Page):
 
     page.overlay.append(pick_files_dialog)
 
+    listTileQuestion = ft.ListTile(
+                            leading=ft.Icon(ft.icons.QUESTION_ANSWER),
+                            title=ft.Text("Ваш вопрос будет тут"),
+                            selected=True,
+                        )
+                        
+    listTileAnswer = ft.ListTile(
+                            title=ft.Text("Ваш ответ будет тут"))
+
+    card = ft.Container(
+                width = 375,
+                border_radius = 40,
+                bgcolor = ft.colors.BLACK45,
+                content = ft.Column(
+                    [   
+                        listTileQuestion,
+                        listTileAnswer
+                        # ft.ListTile(
+                        #     leading=ft.Icon(ft.icons.QUESTION_ANSWER),
+                        #     title=ft.Text("One-line selected list tile"),
+                        #     selected=True,
+                        # ),
+                        # ft.ListTile(
+                        #     title=ft.Text("One-line with leading control"),
+                        # )
+                    ],
+                    spacing = 0,
+                ),
+                padding = ft.padding.symmetric(vertical = 10),
+            )
+
     tab_assistant = ft.Container(
         ft.Stack([
             ft.Column(
                 [
                 ft.Container(
                     ft.Stack([
-                        ft.Column([progress_voice_assistant], top = 205, left = 165),
+                        ft.Column([card]),
+                        ft.Column([progress_voice_assistant], top = 310, left = 160),
                         ft.Column([
-                            ft.IconButton(icon = ft.icons.KEYBOARD_VOICE, icon_size = 30, bgcolor = ft.colors.BLUE,
+                            ft.IconButton(icon = ft.icons.KEYBOARD_VOICE, icon_size = 40, bgcolor = ft.colors.BLUE,
                             on_click = lambda x: speech()),
                         ],
-                        top = 200,
-                        left = 160)
+                        top = 300,
+                        left = 150)
                     ]),
                     border_radius = 40,
                     padding = 5,
