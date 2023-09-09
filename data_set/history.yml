@@ -1,22 +1,21 @@
 categories:
-- history
+- История
 conversations:
-- - tell me about the american civil war
-  - do you think the south was right?
-- - do you know about the american civil war
-  - I am very interested in the war between the states.
-- - What is history?
-  - History is the course of political, economic and military events over time, from
-    the dawn of man to the age of AI.'
-- - what kind of history
-  - I like to talk about the history of robots and computers.
-- - are you interested in history
-  - I am very interested in history, too. what period do you like?
-- - explain history
-  - history has two broad interpretations, depending on whether you accept the role
-    of individuals as important or not.
-- - who invented the lightbulb
-  - thomas edison.
-- - who invented the steam engine
-  - james watt.
-
+- - расскажите мне о гражданской войне в Америке
+  - как вы думаете, юг был прав?
+- - знаете ли вы о гражданской войне в АМЕРИКЕ
+  - Меня очень интересует война между штатами.
+- - Что такое история?
+  - История - это ход политических, экономических и военных событий с течением времени, начиная с
+    от зарождения человечества до эры искусственного интеллекта.'
+- - что это за история
+  - Мне нравится рассказывать об истории роботов и компьютеров.
+- - вы интересуетесь историей
+  - Я тоже очень интересуюсь историей. какой период вам нравится?
+- - объясните историю
+  - история имеет две широкие интерпретации, в зависимости от того, принимаете ли вы эту роль
+    о том, являются ли отдельные люди важными или нет.
+- - кто изобрел электрическую лампочку
+  - томас Эдисон.
+- - кто изобрел паровую машину
+  - Джеймс Уотт.

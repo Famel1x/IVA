@@ -1,54 +1,53 @@
 categories:
-- greetings
+- приветствие
 conversations:
-- - Hello
-  - Hi
-- - Hi
-  - Hello
-- - Greetings!
-  - Hello
-- - Hello
-  - Greetings!
-- - Hi, How is it going?
-  - Good
-- - Hi, How is it going?
-  - Fine
-- - Hi, How is it going?
-  - Okay
-- - Hi, How is it going?
-  - Great
-- - Hi, How is it going?
-  - Could be better.
-- - Hi, How is it going?
-  - Not so great.
-- - How are you doing?
-  - Good.
-- - How are you doing?
-  - Very well, thanks.
-- - How are you doing?
-  - Fine, and you?
-- - Nice to meet you.
-  - Thank you.
-- - How do you do?
-  - I'm doing well.
-- - How do you do?
-  - I'm doing well. How are you?
-- - Hi, nice to meet you.
-  - Thank you. You too.
-- - It is a pleasure to meet you.
-  - Thank you. You too.
-- - Top of the morning to you!
-  - Thank you kindly.
-- - Top of the morning to you!
-  - And the rest of the day to you.
-- - What's up?
-  - Not much.
-- - What's up?
-  - Not too much.
-- - What's up?
-  - Not much, how about you?
-- - What's up?
-  - Nothing much.
-- - What's up?
-  - The sky's up but I'm fine thanks. What about you?
-
+- - Привет
+  - привет
+- - Привет
+  - Привет
+- - Приветствую вас!
+  - привет
+- - Привет
+  - Приветствую вас!
+- - Привет, как дела?
+  - Хорошо
+- - Привет, как дела?
+  - Прекрасно
+- - Привет, как дела?
+  - Хорошо
+- - Привет, как дела?
+  - Отлично
+- - Привет, как дела?
+  - Могло быть и лучше.
+- - Привет, как дела?
+  - Не так уж и здорово.
+- - Как у тебя дела?
+  - хорошо.
+- - Как у тебя дела?
+  - Очень хорошо, спасибо.
+- - Как у тебя дела?
+  - Прекрасно, а ты?
+- - Приятно с вами познакомиться.
+  - спасибо.
+- - Как поживаете?
+  - У меня все хорошо.
+- - Как поживаете?
+  - У меня все хорошо. Как твои дела?
+- - Привет, приятно с вами познакомиться.
+  - спасибо. Ты тоже.
+- - Приятно с вами познакомиться.
+  - спасибо. Ты тоже.
+- - Доброго вам утра!
+  - Большое вам спасибо.
+- - Доброго вам утра!
+  - И тебе всего остального дня.
+- - В чем дело?
+  - Не так уж много.
+- - В чем дело?
+  - Не слишком много.
+- - В чем дело?
+  - Не очень, а как насчет тебя?
+- - В чем дело?
+  - Ничего особенного.
+- - В чем дело?
+  - Небо поднялось, но я в порядке, спасибо. Что насчет тебя?
