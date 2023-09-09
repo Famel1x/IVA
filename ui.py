@@ -1,7 +1,11 @@
 from voice import Voice
-import model
+import model2
 import flet as ft
 import os
+import torch
+
+model, example_texts, languages, punct, apply_te = torch.hub.load(repo_or_dir='snakers4/silero-models',
+                                                                  model='silero_te')
 
 voice = Voice()
 
@@ -28,7 +32,7 @@ def main(page: ft.Page):
         progress_voice_assistant.visible = True
         progress_voice_assistant.update()
         
-        voice.speechToText()
+        # voice.speechToText()
 
         listTileQuestion.title = ft.Text(voice.resultSTT)
         listTileQuestion.update()
@@ -36,7 +40,8 @@ def main(page: ft.Page):
         progress_voice_assistant.color = ft.colors.GREEN
         progress_voice_assistant.update()
 
-        model_result = model.ask(voice.resultSTT)
+        model_result = model2.ask(voice.resultSTT)
+        model_result = apply_te(model_result, lan='ru')
 
         progress_voice_assistant.color = ft.colors.PURPLE
         progress_voice_assistant.update()
