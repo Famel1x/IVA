@@ -1,7 +1,7 @@
 from voice import Voice
 from googletrans import Translator
 from numToWord import numToWord
-# import model2
+import model as md
 import flet as ft
 import os
 import torch
@@ -41,7 +41,7 @@ def main(page: ft.Page):
         progress_voice_assistant.visible = True
         progress_voice_assistant.update()
         
-        voice.speechToText()
+        # voice.speechToText()
 
         listTileQuestion.title = ft.Text(voice.resultSTT)
         listTileQuestion.update()
@@ -49,15 +49,15 @@ def main(page: ft.Page):
         progress_voice_assistant.color = ft.colors.GREEN
         progress_voice_assistant.update()
 
-        model_result = "1231231"
+        model_result = md.ask("привет")
         model_result = apply_te(model_result, lan='ru')
 
         progress_voice_assistant.color = ft.colors.PURPLE
         progress_voice_assistant.update()
 
-        voice.textToSpeech("Привет мир!")
+        voice.textToSpeech(model_result)
 
-        listTileAnswer.title = ft.Text("model_result")
+        listTileAnswer.title = ft.Text(model_result)
         listTileAnswer.update()
 
         progress_voice_assistant.color = ft.colors.BLUE
