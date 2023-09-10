@@ -33,8 +33,8 @@ for i in range(0, len(input_str)):
                 istr2=""
                 for s in range(start, end):
                     istr2=istr2+input_str[s]
-                input_str=input_str[:start] + " " + convert_numbers_to_words(istr2) + " " + input_str[end:]
-                print(input_str)
+input_str=input_str[:start] + " " + convert_numbers_to_words(istr2) + " " + input_str[end:]
+print(input_str)
        
        
 
