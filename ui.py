@@ -1,7 +1,17 @@
 from voice import Voice
-import model
+from googletrans import Translator
+from numToWord import numToWord
+# import model2
 import flet as ft
 import os
+import torch
+
+translator = Translator(service_urls=['translate.googleapis.com'])
+
+print(translator.translate(text = numToWord(int("659595")), dest = "ru").text)
+
+model, example_texts, languages, punct, apply_te = torch.hub.load(repo_or_dir='snakers4/silero-models',
+                                                                  model='silero_te')
 
 voice = Voice()
 
@@ -18,9 +28,12 @@ def getSettings(type: str):
 
 def main(page: ft.Page):
     page.title = "Voice assistant"
+    page.window_left = 550
+    page.window_top = 150
+
     page.window_width = 420
     page.window_height = 500
-    page.theme_mode = getSettings("theme")
+    page.theme_mode = lambda x: getSettings("theme")
 
     progress_voice_assistant = ft.ProgressRing(scale=1.75, color = ft.colors.BLUE, visible = False)
 
@@ -36,14 +49,15 @@ def main(page: ft.Page):
         progress_voice_assistant.color = ft.colors.GREEN
         progress_voice_assistant.update()
 
-        model_result = model.ask(voice.resultSTT)
+        model_result = "1231231"
+        model_result = apply_te(model_result, lan='ru')
 
         progress_voice_assistant.color = ft.colors.PURPLE
         progress_voice_assistant.update()
 
-        voice.textToSpeech(model_result)
+        voice.textToSpeech("Привет мир!")
 
-        listTileAnswer.title = ft.Text(model_result)
+        listTileAnswer.title = ft.Text("model_result")
         listTileAnswer.update()
 
         progress_voice_assistant.color = ft.colors.BLUE
@@ -94,6 +108,9 @@ def main(page: ft.Page):
                 padding = ft.padding.symmetric(vertical = 10),
             )
 
+    def on_change_theme():
+        pass
+
     tab_assistant = ft.Container(
         ft.Stack([
             ft.Column(
@@ -129,7 +146,7 @@ def main(page: ft.Page):
                             ft.OutlinedButton(text="Выбрать файлы",
                                 on_click = lambda x: pick_files_dialog.pick_files(allow_multiple=True)),
                             
-                            ft.IconButton(icon = ft.icons.FILE_UPLOAD, )
+                            ft.IconButton(icon = ft.icons.FILE_UPLOAD)
                         ],
                         top = 15,
                         left = 100),
@@ -156,10 +173,10 @@ def main(page: ft.Page):
                 ft.Container(
                     ft.Stack([
                         ft.Column([
-                            ft.Switch(label = "Темная тема", value = True if getSettings("theme") == "dark" else False)
-                        ],
-                        top = 20,
-                        left = 20)
+                            ft.Switch(label = "Темная тема", value = True if getSettings("theme") == "dark" else False, on_change = lambda x: page.update()) 
+                        ],  top = 20,   left = 20),
+
+                        ft.Column([ft.OutlinedButton(text="Применить")], top = 20, left = 250)
                     ]),
                     border_radius = 40,
                     padding = 5,
